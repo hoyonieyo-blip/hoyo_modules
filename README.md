@@ -3,7 +3,9 @@
 > **Note for English speakers**
 >
 > I'm Korean, and my English isn't very good.
-> Some parts of this README were translated using Naver Papago, so there may be awkward expressions. Sorry!
+> Some parts of this README were translated using Naver Papago.
+> So there may be awkward expressions.
+> Sorry!
 
 This repository contains Python modules created by Hoyo.
 
