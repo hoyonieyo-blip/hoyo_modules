@@ -1,1 +1,102 @@
 # hoyo_modules 
+
+> **Note for English speakers**
+>
+> I'm Korean, and my English isn't very good.
+> Some parts of this README were translated using Naver Papago, so there may be awkward expressions. Sorry!
+
+This repository contains Python modules created by Hoyo.
+
+이 저장소에는 호요가 만든 파이썬 모듈들이 있습니다.
+
+---
+
+## colorformat.py
+
+글자에 색상이나 스타일을 적용할 수 있습니다.
+`colorama`는 자동으로 `ca`라는 이름으로 가져옵니다.
+
+Add colors and text styles to terminal output.
+`colorama` is automatically imported as `ca`.
+
+```python
+import colorformat as cf
+
+print(cf.custom_style('1;31') + 'hello' + cf.RESET_STYLE)
+
+# or
+
+print(cf.RED + cf.BOLD + 'hello' + cf.RESET_STYLE)
+```
+
+---
+
+## dynamicprint.py
+
+`print()`를 다양한 방식으로 사용할 수 있습니다.
+
+Provides several convenient versions of `print()`.
+
+Examples:
+
+* `end='\n\n'`
+* `end=''`
+* `sep=' vs '`
+
+```python
+import dynamicprint as dp
+
+dp.space_end('hello')
+dp.no_end('there!')
+```
+
+---
+
+## listfunc.py
+
+리스트(배열)를 생성하거나 출력하고, 특정 `(x, y)` 주변의 값을 가져올 수 있습니다.
+
+Create and print lists (arrays), or get the neighboring values around a position `(x, y)`.
+
+```python
+import listfunc as lf
+import random as rd
+
+var = []
+size = 10
+
+lf.make_list_size(var, rd.randint(0, 1), size)
+
+rr = lambda v: rd.randrange(0, v)
+
+for i in range(10):
+    x, y = rr(size), rr(size)
+    lf.neighbors_size(x, y, var, size).count(1)
+```
+
+---
+
+## typeinput.py
+
+자료형에 맞는 입력을 받을 수 있습니다.
+
+Receive user input according to the specified type.
+
+```python
+import typeinput as ti
+from colorformat import BOLD, RESET_STYLE
+
+ti.type_input('input(int): ', int)
+ti.intinput('intinput: ')
+ti.boolinput(f'boolinput({BOLD}T{RESET_STYLE}rue, {BOLD}F{RESET_STYLE}alse): ')
+```
+
+---
+
+## PyPI
+
+아직 PyPI에 배포하는 방법을 배우지 못했습니다.
+
+I don't know how to publish this project to PyPI yet.
+
+For now, please place these modules directly into your Python `Lib` directory.
