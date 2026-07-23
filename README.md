@@ -67,13 +67,17 @@ import random as rd
 var = []
 size = 10
 
-lf.make_list_size(var, rd.randint(0, 1), size)
+lf.make_list_size(var, '00', size)
 
 rr = lambda v: rd.randrange(0, v)
 
-for i in range(10):
+for i in range(50):
     x, y = rr(size), rr(size)
-    lf.neighbors_size(x, y, var, size).count(1)
+    var[y][x] = str(rr(100)).zfill(2)
+
+lf.print_list(var)
+for i in range(10):
+    print(lf.neighbors_size(rr(10), rr(10), var, size))
 ```
 
 ---
