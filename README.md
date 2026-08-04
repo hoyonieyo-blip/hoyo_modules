@@ -3,9 +3,8 @@
 > **Note for English speakers**
 >
 > I'm Korean, and my English isn't very good.
-> Some parts of this README were translated using Naver Papago.
+> Some parts of this README were translated using Naver Papago or ChatGPT.
 > So there may be awkward expressions.
-> And I used ChatGPT.
 > Sorry!
 
 This repository contains Python modules created by Hoyo.
