@@ -11,7 +11,7 @@ def custom_style(v : str):
 cs = custom_style # used in only this module 이 모듈에서만 사용합니다
 
 # font style
-RESET_STYLE = cs(0) # 모든 스타일 초기화
+RESET_STYLE = cs(0) # 모든 스타일 초기화 (reset all style)
 BOLD = cs(1) # 굵게 (Bold)
 DIM = cs(2) # 흐리게 (Dim)
 ITALIC = cs(3) # 기울임 (Italic)
@@ -22,27 +22,28 @@ HIDDEN = cs(8) # 숨김 (Hidden)
 STRIKETHROUGH = cs(9) # 취소선 (Strikethrough)
 
 # color
-BLACK = cs(30) # 검정
-RED = cs(31) # 빨강
-GREEN = cs(32) # 초록
-YELLOW = cs(33) # 노랑
-BLUE = cs(34) # 파랑
+BLACK = cs(30) # 검정 (black)
+RED = cs(31) # 빨강 (red)
+GREEN = cs(32) # 초록 (green)
+YELLOW = cs(33) # 노랑 (yellow)
+BLUE = cs(34) # 파랑 (blue)
 MAGENTA = cs(35) # 자홍 (Magenta)
 CYAN = cs(36) # 청록 (Cyan)
-WHITE = cs(37) # 흰색
+WHITE = cs(37) # 흰색 (White)
 
 # background
-BACK_BLACK = cs(40) # 검정 배경
-BACK_RED = cs(41) # 빨강 배경
-BACK_GREEN = cs(42) # 초록 배경
-BACK_YELLOW = cs(43) # 노랑 배경
-BACK_BLUE = cs(44) # 파랑 배경
-BACK_MAGENTA = cs(45) # 자홍 배경
-BACK_CYAN = cs(46) # 청록 배경
-BACK_WHITE = cs(47) # 흰색 배경
+BACK_BLACK = cs(40) # 검정 배경 (Black)
+BACK_RED = cs(41) # 빨강 배경 (Red)
+BACK_GREEN = cs(42) # 초록 배경 (Green)
+BACK_YELLOW = cs(43) # 노랑 배경 (Yellow)
+BACK_BLUE = cs(44) # 파랑 배경 (Blue)
+BACK_MAGENTA = cs(45) # 자홍 배경 (Magenta)
+BACK_CYAN = cs(46) # 청록 배경 (Cyan)
+BACK_WHITE = cs(47) # 흰색 배경 (White)
 
 # color 2
-GRAY = cs(90) # 밝은 검정 (회색)
+# look var's name
+GRAY = cs(90) # 밝은 검정
 SCARLET = cs(91) # 밝은 빨강
 LIME = cs(92) # 밝은 초록
 LEMON_YELLOW = cs(93) # 밝은 노랑

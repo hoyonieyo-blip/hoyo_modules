@@ -1,15 +1,15 @@
 # I made many thing with 2D list.
 # I define them every times.
 # 'Make a module! And you can make file more easy.'
-import typing as ti
+import typing as ty
 
 # print list
-def print_list(list_var : list[list[ti.Any]]):
+def print_list(list_var : list[list[ty.Any]]):
     for row in list_var:
         for value in row:
             print(value, end = ' ')
         print()
-def print_list_zfill(list_var : list[list[ti.Any]], zfill_value : int):
+def print_list_zfill(list_var : list[list[ty.Any]], zfill_value : int):
     for row in list_var:
         for value in row:
             print(str(value).zfill(zfill_value), end = ' ')
@@ -18,7 +18,7 @@ def print_list_zfill(list_var : list[list[ti.Any]], zfill_value : int):
 # make list
 def make_list_size(
     list_var : list,
-    save_value : ti.Any,
+    save_value : ty.Any,
     size : int
 ):
     for row in range(size):
@@ -28,7 +28,7 @@ def make_list_size(
         list_var.append(row_list)
 def make_list_xy(
     list_var : list,
-    save_value : ti.Any,
+    save_value : ty.Any,
     x : int,
     y : int
 ):
@@ -71,7 +71,7 @@ def convert(
     new : object,
     x : int,
     y : int,
-    list_var : list[list[ti.Any]]
+    list_var : list[list[ty.Any]]
 ):
     if list_var[y][x] == old:
         list_var[y][x] = new
@@ -80,7 +80,7 @@ def convert(
 def neighbors_size(
     x : int,
     y : int,
-    list_var : list[list[ti.Any]],
+    list_var : list[list[ty.Any]],
     size : int,
 ):
     return [
@@ -93,7 +93,7 @@ def neighbors_size(
 def neighbors_xy(
     x : int,
     y : int,
-    list_var : list[list[ti.Any]],
+    list_var : list[list[ty.Any]],
     size_x : int,
     size_y : int
 ):
