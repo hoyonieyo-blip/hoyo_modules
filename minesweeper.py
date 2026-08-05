@@ -232,7 +232,7 @@ while True:
                 'show x y\n'
                 'flag x y\n'
                 'end\n'
-                'quickshow\n'
+                'quickshow x y\n'
                 'help\n'
                 '> '
             )
