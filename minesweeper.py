@@ -266,8 +266,7 @@ while True:
             # 끝내기 (End the game)
             elif func == 'end':
                 bk = end()
-                if bk:
-                    break
+                break
 
             # 빠르게 열고 싶을 때 (When you want to open cells quickly)
             elif func == 'quickshow':
