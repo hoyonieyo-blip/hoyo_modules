@@ -66,7 +66,6 @@ def end():
     )
     kb.wait('esc')
     print()
-    return True
 
 # 0 나왔을 때 주변 열기 (Open surrounding cells when 0 appears)
 def zero(
