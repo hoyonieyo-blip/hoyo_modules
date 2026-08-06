@@ -111,8 +111,8 @@ For now, please place these modules directly into your Python `Lib` directory.
 
 ## How to use
 
-I saved `minesweeper.py` file.
-I think you can use them like this.
+I put `minesweeper.py` file in `HowToUse` folder.
+I think you can use it like this.
 
-`minesweeper` 파일을 저장해뒀습니다.
+`minesweeper` 파일을 `HowToUse` 폴더에 저장해뒀습니다.
 이런 식으로 쓰면 될 거 같아요.
