@@ -1,5 +1,55 @@
 # colorformat.py
 # use colorama, and '\033[31m'
+# made by hoyo
+#
+# custom_style(v) > f'\033[{v}m'
+#
+# RESET_STYLE
+# BOLD
+# DIM
+# ITALIC
+# UNDERLINE
+# BLINK
+# REVERSE
+# HIDDEN
+# STRIKETHROUGH
+# 
+# BLACK
+# RED
+# GREEN
+# YELLOW
+# BLUE
+# MAGENTA
+# CYAN
+# WHITE
+# 
+# BACK_BLACK
+# BACK_RED
+# BACK_GREEN
+# BACK_YELLOW
+# BACK_BLUE
+# BACK_MAGENTA
+# BACK_CYAN
+# BACK_WHITE
+# 
+# GRAY
+# SCARLET
+# LIME
+# LEMON_YELLOW
+# SKY_BLUE
+# FUCHSIA
+# AQUA
+# BRIGHT_WHITE
+# 
+# BACK_DARK_GRAY
+# BACK_SCARLET
+# BACK_LIME
+# BACK_LEMON_YELLOW
+# BACK_SKY_BLUE
+# BACK_FUCHSIA
+# BACK_AQUA
+# BACK_BRIGHT_WHITE
+
 import colorama as ca
 ca.init()
 

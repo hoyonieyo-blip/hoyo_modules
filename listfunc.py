@@ -1,6 +1,15 @@
 # I made many thing with 2D list.
 # I define them every times.
 # 'Make a module! And you can make file more easy.'
+# made by hoyo
+#
+# print_list(list_var)
+# print_list_zfill(list_var, zfill_value)
+# make_list_size(list_var, save_value, size)
+# make_list_xy(list_var, save_value, x, y)
+# wrap_list(index, size) > index % size
+# block_index(index, size) > index(edited)
+
 import typing as ty
 
 # print list
@@ -50,9 +59,9 @@ def block_index(
     index : int,
     size : int
 ):
-    while index >= size:
-        index -= 1
-    while index < 0:
+    if index >= size:
+        index = size
+    elif index < 0:
         index = 0
     return index
 

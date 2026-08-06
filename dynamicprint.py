@@ -1,4 +1,11 @@
 # dynamicprint.py
+# made by hoyo
+#
+# no_end(*val, sep=' ', file=None, flush=None)
+# space_end(*val, sep=' ', file=None, flush=None)
+# two_down(*val, sep=' ', file=None, flush=None)
+# vs_sep(*val, end='\n', file=None, flush=None)
+# down_sep(*val, end='\n\n', file=None, flush=None)
 
 # print with no end, space end, or something
 def no_end(
@@ -41,7 +48,7 @@ def down_sep(
 ):
     print(*val, sep='\n', end=end, file=file, flush=flush)
 
-# i it is runned without import
+# if it is runned without import
 if __name__ == '__main__':
     import keyboard as kb
     two_down('ok, I show this module\'s information.')
