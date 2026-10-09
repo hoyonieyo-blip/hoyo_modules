@@ -7,18 +7,23 @@
 # floatinput(string) > float(input(string))
 # boolinput(string) > bool_set(inp)
 
+import typing
+
 # define type_input, intinput, floatinput, boolinput
-def type_input(string : str, type_val : type):
-    return type_val(input(string))
+def type_input(
+    prompt : str,
+    type_val : type
+) -> typing.Any:
+    return type_val(input(prompt))
 
-def intinput(string : str):
-    return int(input(string))
+def intinput(prompt : str) -> int:
+    return int(input(prompt))
 
-def floatinput(string : str):
-    return float(input(string))
+def floatinput(prompt : str) -> float:
+    return float(input(prompt))
 
-def boolinput(string : str):
-    inp = input(string)
+def boolinput(prompt : str) -> bool | None:
+    inp = input(prompt)
     bool_set = {
         'True' : True,
         'False' : False,
@@ -29,14 +34,3 @@ def boolinput(string : str):
             f'type name \'{inp}\' is not defined\nboolinput\'s input must be \'True\' or \'False\' or \'None\''
         )
     return bool_set[inp]
-
-# if it is runned without import
-if __name__ == '__main__':
-    import keyboard as kb, dynamicprint as dp
-    dp.two_down('ok, I show this module\'s information.')
-    print('type input(string, type_val)')
-    print('intinput(string)')
-    print('floatinput(string)')
-    dp.two_down('boolinput(string)')
-    print('press \'esc\', and it will close')
-    kb.wait('esc')

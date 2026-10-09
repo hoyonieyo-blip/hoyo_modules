@@ -16,10 +16,10 @@ This repository contains Python modules created by Hoyo.
 ## colorformat.py
 
 글자에 색상이나 스타일을 적용할 수 있습니다.
-`colorama`는 자동으로 `ca`라는 이름으로 가져옵니다.
-
 Add colors and text styles to terminal output.
-`colorama` is automatically imported as `ca`.
+
+`colorama` 모듈이 필요하고, `ca`라는 이름으로 가져와집니다.
+Requires `colorama` module, and it is imported as `ca`.
 
 ```python
 import colorformat as cf
@@ -97,6 +97,38 @@ ti.intinput('intinput: ')
 ti.boolinput(f'boolinput({BOLD}T{RESET_STYLE}rue, {BOLD}F{RESET_STYLE}alse): ')
 ```
 
+## scdecd.py
+
+파일의 시작과 끝을 만들어뒀습니다.
+모듈 이름의 유래가 **S**tart **C**ode **D**ata, **E**nd ... 이거예요.
+
+It defines the start and end of a file.
+The module name comes from **S**tart **C**ode **D**ata, **E**nd ...
+
+`keyboard`, `pygame` 모듈이 필요합니다.
+가능한 경우 직접 `pygame` 모듈을 사용하는 부분을 전부 주석 처리한 뒤 사용하셔도 됩니다.
+
+Requires `keyboard`, `pygame` module.
+If possible, you can use it after deleting or commenting `pygame` parts.
+
+```python
+# HowToUse/english_point.py
+import scdecd as se
+
+engchar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+# encode
+s = se.sinput('string to encode\n> ').upper()
+l = map(engchar.find, list(s))
+if se.debug: se.printv('s'); se.printv('l')
+
+# print
+p = ' '.join(map(str, l))
+print(p)
+
+se.ecd()
+```
+
 ---
 
 ## PyPI
@@ -111,8 +143,8 @@ For now, please place these modules directly into your Python `Lib` directory.
 
 ## How to use
 
-I put `minesweeper.py` and `swam_array.py` file in the `HowToUse` folder.
-I think you can use it like this.
+I put the `minesweeper.py`, `swam_array.py`, and `english_point.py` files in the `HowToUse` folder.
+I think you can use them like this.
 
-`minesweeper.py`와 `swam_array.py` 파일을 `HowToUse` 폴더에 저장해뒀습니다.
+`minesweeper.py`와 `swam_array.py`, `english_point.py` 파일을 `HowToUse` 폴더에 저장해뒀습니다.
 이런 식으로 쓰면 될 거 같아요.

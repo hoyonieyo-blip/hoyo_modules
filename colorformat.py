@@ -55,7 +55,17 @@ ca.init()
 
 # set custom style
 # 사용자 지정 글꼴 스타일을 정합니다
-def custom_style(v : str):
+def custom_style(v : int = 0) -> str:
+    '''
+    custom style
+
+    v
+        str value
+        default : 0
+    
+    return
+        f'\\033[{v}m' str
+    '''
     return f'\033[{v}m'
 
 cs = custom_style # used in only this module 이 모듈에서만 사용합니다
@@ -67,7 +77,7 @@ DIM = cs(2) # 흐리게 (Dim)
 ITALIC = cs(3) # 기울임 (Italic)
 UNDERLINE = cs(4) # 밑줄 (Underline)
 BLINK = cs(5) # 깜빡임 (Blink)
-REVERSE = cs(7) # 반전 (Reverse: 글자/배경 반전)
+REVERSE = cs(7) # 반전 (Reverse str/bg 글자/배경 반전)
 HIDDEN = cs(8) # 숨김 (Hidden)
 STRIKETHROUGH = cs(9) # 취소선 (Strikethrough)
 
