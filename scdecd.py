@@ -1,41 +1,3 @@
-'''
-scdecd
-unnormal module!
-
-import
-    keyboard (only Windows)
-    pygame (not in phone)
-    sys
-    types
-    typing
-
-class
-    NoInputError(Exception)
-
-function
-    sinput
-        prompt : str
-        tp : type | None = str
-        return -> (Any | str)
-
-    pf
-        inp : object
-        return -> (None | object)
-    
-    printv
-        vn : str
-        por : int | None = 0
-        return -> (None | typing.Any)
-
-    ecd
-
-    check_debug
-
-variable
-    debug
-        bool
-'''
-
 import keyboard # only Windows
 import pygame # not in phone
 import sys
@@ -54,8 +16,10 @@ def sinput(
     tp : type = str
 ) -> typing.Any:
     '''
-    showinput
+    showinput\n
     for Python CodePad in iOS
+
+    ---
 
     prompt
         str
@@ -93,8 +57,10 @@ def pf(
     inp : typing.Any = None
 ) -> typing.Any:
     '''
-    pass function
+    pass function\n
     do nothing
+
+    ---
 
     inp
         return
@@ -106,9 +72,11 @@ def printv(
     vn : str,
 ) -> None:
     '''
-    print value
-    print 'vn' value
+    print value\n
+    print `vn` value
     
+    ---
+
     vn
         value name
         str
@@ -153,9 +121,11 @@ def ezf(
     zv : int = 0
 ) -> str:
     '''
-    easy zfill
-    str(num).zfill(zv) == ezf(num, zv)
+    easy zfill\n
+    `str(num).zfill(zv) == ezf(num, zv)`
 
+    ---
+    
     num
         int
         default number
@@ -167,22 +137,68 @@ def ezf(
 
     return str(num).zfill(zv)
 
+def ete(
+    exception : BaseException
+) -> str:
+    '''
+    easy try-except
+
+    ---
+
+    exception
+        BaseException
+
+    return
+        `f'{type(exception).__name__}: {exception}'`
+    '''
+
+    return f'{type(exception).__name__}: {exception}'
+
 # ECD
-def ecd():
+def ecd(
+    ec : int = 0
+) -> None:
+    '''
+    end code data
+
+    ---
+
+    ec
+        int
+        error code
+
+    raises
+        SystemExit
+            `sys.exit(e)`
+    '''
+
     pygame.quit() # not in phone
-    
-    if debug:
+
+    if debug and (not ec):
         e = sinput('\nerror code\n> ', int)
         if type(e) == str: e = 1
-    else: e = 0
+    else: e = ec
 
-    print('\npress \'esc\' to quit program...', end=''); keyboard.wait('esc') # only Windows
+    print('\npress \'esc\' to quit program...', end='') # only Windows
+    keyboard.wait('esc') # only Windows
     sys.exit(e)
 
 # debug mode
-# if se.debug: printv(vn)
+# idpv(str)
 debug = False
+
 def check_debug() -> None:
+    '''
+    check debug
+
+    ---
+
+    debug
+        return value
+        if 'y' : debug = True
+        if 'n' : debug = False
+    '''
+
     global debug
 
     di = sinput('debug mode? y/n\n> ')
@@ -191,6 +207,20 @@ def check_debug() -> None:
     if di not in ('y', 'n'): pass
     elif di == 'y':
         debug = True
+
     del di
 
-    print()
+def idpv(*values : str) -> None:
+    '''
+    if debug print value\n
+    ...
+
+    ---
+
+    *values
+        str
+    '''
+
+    if debug:
+        for value in values:
+            printv(value)

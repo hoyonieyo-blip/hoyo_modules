@@ -1,14 +1,25 @@
-import scdecd as se
+from scdecd import *
 
-engchar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+def main():
+    engchar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-# encode
-s = se.sinput('string to encode\n> ').upper()
-l = map(engchar.find, list(s))
-if se.debug: se.printv('s'); se.printv('l')
+    # encode
+    s = sinput('string to encode\n> ').upper()
+    l = map(engchar.find, list(s))
+    idpv('s', 'l')
 
-# print
-p = ' '.join(map(str, l))
-print(p)
+    # print
+    p = ' '.join(map(str, l))
+    print(p)
 
-se.ecd()
+    ecd()
+
+while True:
+    try: main()
+    except BaseException as e:
+        print(ete(e))
+        x = 1
+    else: x = 0
+
+    agn = sinput('again? y/n\n> ').lower() == 'y'
+    if not agn: ecd(x)
